@@ -1,0 +1,40 @@
+{
+  "name": "react-udemy-course",
+  "version": "1.0.0",
+  "description": "Messing around with react via Udemy course",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinzed1127/react-udemy-course.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "udemy"
+  ],
+  "author": "Dan Hinze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hinzed1127/react-udemy-course/issues"
+  },
+  "homepage": "https://github.com/hinzed1127/react-udemy-course#readme",
+  "dependencies": {
+    "babel-preset-stage-1": "^6.16.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.9.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
