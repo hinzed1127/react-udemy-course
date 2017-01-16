@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+
+    //state exists on all React class-based components
+    //records and reacts to JS events. here, we're initializing
+    //state for the SearchBar search term
+    this.state = { term: '' };
+  }
+
   render () {
-    return <input onChange={event => console.log(event.target.value)} />;
+    //return a controlled component, that is set BY state, not the inverse
+    return (
+      <div>
+        <input
+          value={this.state.term}
+          onChange={event => this.setState({ term: event.target.value })} />
+      </div>
+    );
   }
 
   //above function is anonymous.
@@ -11,7 +27,7 @@ class SearchBar extends Component {
   //if brackets aren't included, you get
   //SyntaxError: JSX value should be either an expression or a quoted JSX text
   onInputChange(event) {
-    console.log(event.target.value);
+    this.setState({ term: event.target.value });
   }
 }
 
