@@ -1,8 +1,10 @@
+//3rd party
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import YTSearch from 'youtube-api-search';
 
+//Personal
+import youtubeSearch from './services/youtube-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
@@ -18,18 +20,15 @@ class App extends Component {
           selectedVideo: null
         };
 
-        this.videoSearch('uptake chicago');
+        this.videoSearch('Shiftgig Chicago');
     }
 
     videoSearch(term) {
-        YTSearch({key: API_KEY, term}, (videos) => {
+        youtubeSearch({key: API_KEY, term}, (videos) => {
             this.setState({
                 videos,
                 selectedVideo: videos[0]
             });
-            //ES6 syntactic sugar
-            //equivalent to this.setState({videos: videos});
-            //Uses destructuring, see video_list_item for another example
         });
     }
 
