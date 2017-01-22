@@ -9,28 +9,40 @@ import VideoDetail from './components/video_detail';
 const API_KEY = 'AIzaSyBo_aCZ3VX0AOJHIliZ2kSksIzazYre1x4';
 
 class App extends Component {
-  constructor(props) {
-      super(props);
+    constructor(props) {
+        super(props);
 
-      this.state = { videos: [] };
+        this.state = {
+          videos: [],
+          selectedVideo: null
+        };
 
-      YTSearch({key: API_KEY, term: 'uptake chicago'}, (videos) => {
-          this.setState({ videos });
-          //ES6 syntactic sugar
-          //equivalent to this.setState({videos: videos});
-          //Uses destructuring, see video_list_item for another example
-      });
-  }
+        this.videoSearch('uptake chicago');
+    }
 
-  render() {
-    return (
-      <div>
-        <SearchBar />
-        <VideoDetail video={this.state.videos[0]} />
-        <VideoList videos={this.state.videos} />
-      </div>
-    );
-  }
+    videoSearch(term) {
+        YTSearch({key: API_KEY, term}, (videos) => {
+            this.setState({
+                videos,
+                selectedVideo: videos[0]
+            });
+            //ES6 syntactic sugar
+            //equivalent to this.setState({videos: videos});
+            //Uses destructuring, see video_list_item for another example
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+                <VideoDetail video={this.state.selectedVideo} />
+                <VideoList
+                    onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+                    videos={this.state.videos} />
+            </div>
+        );
+    }
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
