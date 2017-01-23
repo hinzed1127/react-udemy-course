@@ -1,3 +1,7 @@
+body {
+    background-color: #f1f1f1;
+}
+
 .search-bar {
     margin: 20px;
     text-align: center;
@@ -24,6 +28,10 @@
 
 .list-group-item:hover {
     background-color: #eee;
+}
+
+.details {
+    background-color: #fff;
 }
 
 .video-title {
