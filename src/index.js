@@ -1,4 +1,4 @@
-//3rd party
+//Third-party
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -20,7 +20,7 @@ class App extends Component {
           selectedVideo: null
         };
 
-        this.videoSearch('Shiftgig Chicago');
+        this.videoSearch('');
     }
 
     videoSearch(term) {

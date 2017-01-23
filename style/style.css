@@ -25,3 +25,18 @@
 .list-group-item:hover {
     background-color: #eee;
 }
+
+.video-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.video-description {
+    font-weight: 400;
+}
+
+.loading-message {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 50px;
+}

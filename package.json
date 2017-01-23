@@ -1,32 +1,26 @@
 {
-  "name": "react-udemy-course",
+  "name": "react-youtube-player",
   "version": "1.0.0",
-  "description": "Messing around with react via Udemy course",
+  "description": "Mock youtube video viewer using react",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hinzed1127/react-udemy-course.git"
+    "url": "git+https://github.com/hinzed1127/react-youtube-player"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "udemy"
-  ],
   "author": "Dan Hinze",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hinzed1127/react-udemy-course/issues"
+    "url": "https://github.com/hinzed1127/react-youtube-player/issues"
   },
-  "homepage": "https://github.com/hinzed1127/react-udemy-course#readme",
+  "homepage": "https://github.com/hinzed1127/react-youtube-player#readme",
   "dependencies": {
     "babel-preset-stage-1": "^6.16.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "youtube-api-search": "0.0.5"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
